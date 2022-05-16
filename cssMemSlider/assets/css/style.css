@@ -23,7 +23,8 @@ body {
     align-content: center;
 }
 .slider__main input {
-    display: none;
+    position: absolute;
+    visibility: hidden;
 }
 .slides {
     grid-column: 1/3;
@@ -43,12 +44,16 @@ body {
 .slider__text {
     align-self: center;
     font-size: 2rem;
-    display: grid;
-    grid-template-columns: repeat(5, 100%);
     overflow: hidden;
 }
-.slider__text span {
-    width: 100%;
+.text__main {
+    display: flex;
+    overflow: hidden;
+    width: 500%;
+}
+.text__main div {
+    width: 20%;
+    transition: all .5s ease;
 }
 .slider__controls {
     justify-self: end;
@@ -68,7 +73,60 @@ body {
 .slider__controls label:hover {
     background: blue;
 }
-#slide-1:checked ~ .slider__controls {
+#slide-1:checked ~ .slider__controls label[for='slide-1']:hover,
+#slide-2:checked ~ .slider__controls label[for='slide-2']:hover,
+#slide-3:checked ~ .slider__controls label[for='slide-3']:hover,
+#slide-4:checked ~ .slider__controls label[for='slide-4']:hover,
+#slide-5:checked ~ .slider__controls label[for='slide-5']:hover {
+    border-color: blue;
+}
+#slide-1:checked ~ .slider__controls label[for='slide-1'] {
     background: none;
-    border: 3px solid #fff;
+    border: 0.2em solid #fff;
+}
+#slide-2:checked ~ .slider__controls label[for='slide-2'] {
+    background: none;
+    border: 0.2em solid #fff;
+}
+#slide-3:checked ~ .slider__controls label[for='slide-3'] {
+    background: none;
+    border: 0.2em solid #fff;
+}
+#slide-4:checked ~ .slider__controls label[for='slide-4'] {
+    background: none;
+    border: 0.2em solid #fff;
+}
+#slide-5:checked ~ .slider__controls label[for='slide-5'] {
+    background: none;
+    border: 0.2em solid #fff;
+}
+#slide-1:checked ~ .slides .active {
+    margin-left: 0;
+}
+#slide-2:checked ~ .slides .active {
+    margin-left: -20%;
+}
+#slide-3:checked ~ .slides .active {
+    margin-left: -40%;
+}
+#slide-4:checked ~ .slides .active {
+    margin-left: -60%;
+}
+#slide-5:checked ~ .slides .active {
+    margin-left: -80%;
+}
+#slide-1:checked ~ .slider__text .active {
+    margin-left: 0;
+}
+#slide-2:checked ~ .slider__text .active {
+    margin-left: -20%;
+}
+#slide-3:checked ~ .slider__text .active {
+    margin-left: -40%;
+}
+#slide-4:checked ~ .slider__text .active {
+    margin-left: -60%;
+}
+#slide-5:checked ~ .slider__text .active {
+    margin-left: -80%;
 }
