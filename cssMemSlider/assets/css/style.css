@@ -19,7 +19,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50% 10%;
-    gap: 20px 0;
+    gap: 2rem 0;
     align-content: center;
 }
 .slider__main input {
@@ -137,3 +137,32 @@ body {
 #slide-5:checked ~ .slider__text .active {
     margin-left: -80%;
 }
+
+/*ADAPTIVE*/
+@media (max-width: 768px) {
+    .slider__main {
+        grid-template-columns: 1fr;
+        gap: 1rem 0;
+    }
+    .slides {
+        grid-column: 1;
+    }
+    .slider__controls {
+        grid-row: 2/3;
+        justify-self: center;
+    }
+}
+@media (max-width: 480px) {
+    .slider__controls {
+        width: 50%;
+    }
+    .slider__controls label {
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .slider__controls label span {
+        width: 1em;
+        height: 1em;
+    }
+}
+/*ADAPTIVE*/
