@@ -63,40 +63,47 @@ body {
     justify-content: space-between;
 }
 .slider__controls label {
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.slider__controls label span {
     width: 1.5em;
     height: 1.5em;
     background: #fff;
     border-radius: 50%;
-    cursor: pointer;
     transition: all .5s ease;
 }
-.slider__controls label:hover {
+.slider__controls label:hover span {
     background: blue;
 }
-#slide-1:checked ~ .slider__controls label[for='slide-1']:hover,
-#slide-2:checked ~ .slider__controls label[for='slide-2']:hover,
-#slide-3:checked ~ .slider__controls label[for='slide-3']:hover,
-#slide-4:checked ~ .slider__controls label[for='slide-4']:hover,
-#slide-5:checked ~ .slider__controls label[for='slide-5']:hover {
+#slide-1:checked ~ .slider__controls label[for='slide-1']:hover span,
+#slide-2:checked ~ .slider__controls label[for='slide-2']:hover span,
+#slide-3:checked ~ .slider__controls label[for='slide-3']:hover span,
+#slide-4:checked ~ .slider__controls label[for='slide-4']:hover span,
+#slide-5:checked ~ .slider__controls label[for='slide-5']:hover span {
     border-color: blue;
 }
-#slide-1:checked ~ .slider__controls label[for='slide-1'] {
+#slide-1:checked ~ .slider__controls label[for='slide-1'] span {
     background: none;
     border: 0.2em solid #fff;
 }
-#slide-2:checked ~ .slider__controls label[for='slide-2'] {
+#slide-2:checked ~ .slider__controls label[for='slide-2'] span {
     background: none;
     border: 0.2em solid #fff;
 }
-#slide-3:checked ~ .slider__controls label[for='slide-3'] {
+#slide-3:checked ~ .slider__controls label[for='slide-3'] span {
     background: none;
     border: 0.2em solid #fff;
 }
-#slide-4:checked ~ .slider__controls label[for='slide-4'] {
+#slide-4:checked ~ .slider__controls label[for='slide-4'] span {
     background: none;
     border: 0.2em solid #fff;
 }
-#slide-5:checked ~ .slider__controls label[for='slide-5'] {
+#slide-5:checked ~ .slider__controls label[for='slide-5'] span {
     background: none;
     border: 0.2em solid #fff;
 }
